@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:11
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: world
+      POSTGRES_USER: foo
+      POSTGRES_PASSWORD: bar
+  redis:
+    image: redis:5
+    ports:
+      - "6379:6379"
